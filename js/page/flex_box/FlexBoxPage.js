@@ -2,7 +2,13 @@ import React, {Component} from 'react';
 import {FlatList, StyleSheet, Text, View} from 'react-native';
 import {pTd} from "../../Utils/SizeUtil.js"
 
-var dataArr = [{key: 'FlexWrap'}, {key: 'JustifyContent'}, {key: 'AlignItems'}];
+var dataArr = [
+    {key: 'FlexWrap'},
+    {key: 'JustifyContent'},
+    {key: 'AlignItems'},
+    {key: 'AlignContent'},
+    {key: 'AlignSelf'}
+];
 
 const styles = StyleSheet.create({
     container: {
