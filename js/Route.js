@@ -7,6 +7,9 @@ import AlignItemsPage from './page/flex_box/AlignItemsPage.js';
 import FlexWrapPage from './page/flex_box/FlexWrapPage.js';
 import AlignContentPage from './page/flex_box/AlignContentPage';
 import AlignSelfPage from './page/flex_box/AlignSelfPage.js';
+import ListViewPage from './page/list_view/ListViewPage.js';
+import FlatListPage from './page/list_view/FlatListPage.js';
+import SectionListPage from './page/list_view/SectionListPage.js';
 
 const RouteStack = createStackNavigator(
     {
@@ -16,7 +19,7 @@ const RouteStack = createStackNavigator(
         BaseComponent: {
             screen: BaseComponentPage
         },
-        FlexBoxPage: {
+        FlexBox: {
             screen: FlexBoxPage
         },
         JustifyContent: {
@@ -33,6 +36,15 @@ const RouteStack = createStackNavigator(
         },
         AlignSelf: {
             screen: AlignSelfPage
+        },
+        ListView: {
+            screen: ListViewPage
+        },
+        FlatList: {
+            screen: FlatListPage
+        },
+        SectionList: {
+            screen: SectionListPage
         }
     },
     {

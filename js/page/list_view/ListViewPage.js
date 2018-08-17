@@ -1,11 +1,6 @@
 import React, {Component} from 'react';
-import {FlatList, StyleSheet, Text, View} from 'react-native';
-import {pTd} from "../Utils/SizeUtil.js"
-
-var dataArr = [
-    {key: 'FlexBox'},
-    {key: 'ListView'}
-];
+import {StyleSheet, View, FlatList, Text} from 'react-native';
+import {pTd} from "../../Utils/SizeUtil";
 
 const styles = StyleSheet.create({
     container: {
@@ -19,16 +14,21 @@ const styles = StyleSheet.create({
     }
 });
 
-export default class BaseComponentPage extends Component {
+var dataArr = [
+    {key: 'FlatList'},
+    {key: 'SectionList'},
+    {key: 'VirtualizedList'}
+];
 
-    static navigationOptions = ({navigation}) => ({
-        title: 'BaseComponent'
-    });
+export default class ListViewPage extends Component {
+
+    static navigationOptions = {
+        title: 'ListView'
+    };
 
     _onItemPressed(index) {
         this.props.navigation.navigate(dataArr[index].key);
     }
-
 
     render() {
         return (
@@ -38,9 +38,9 @@ export default class BaseComponentPage extends Component {
                     renderItem={
                         ({item, index}) =>
                             <Text style={styles.item} onPress={this._onItemPressed.bind(this, index)}>{item.key}</Text>
-                    }/>
+                    }
+                />
             </View>
         );
     }
-
 }
